@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to right, green, blue);
+}
+
+.calculator-grid {
+  display: grid;
+  margin-top: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(6rem, auto) repeat(5, 6rem);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 4;
+  justify-content: flex-end;
+  text-align: end;
+  padding: 1rem;
+  grid-row: span 1;
+  height: 7rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  overflow: scroll;
+}
+
+.previousInput {
+  font-size: 1.7rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.currentInput {
+  font-size: 2.2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
